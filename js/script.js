@@ -11,20 +11,24 @@ stampare prezzo biglietto forma umana
 END IF
 */
 
-const km = parseInt(prompt('Quanti km devi percorrere?'));
-console.log(km);
 
-const age = parseInt(prompt('Quanti anni hai?'));
-console.log(age);
+const button = document.querySelector('button');
 
-let price = km * 0.21;
-console.log(price);
+button.addEventListener('click' , function(){
 
-if (age < 18) {
+    let eleAge = document.querySelector('#age').value;
+    let eleKm = document.getElementById('km').value;
+    console.log(eleKm)
+
+    let price = eleKm * 0.21;
+
+    if (eleAge === 'minorenne') {
     price = price - (price * 0.2);
+    
+}   else if(eleAge === 'over65'){
+    price = price - (price * 0.4);     
+} 
 
-}   else if(age > 65){
-        price = price - (price * 0.4);     
-}  
-
-console.log('Il prezzo del biglietto è:', price.toFixed(2), '€');
+    document.getElementById('price').innerHTML = price.toFixed(2) + '€';
+}
+)
