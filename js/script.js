@@ -16,10 +16,9 @@ const button = document.querySelector('button');
 
 button.addEventListener('click' , function(){
 
-    let eleAge = document.querySelector('#age').value;
-    let eleKm = document.getElementById('km').value;
-    console.log(eleKm)
-
+    const eleAge = document.querySelector('#age').value;
+    const eleKm = document.getElementById('km').value;
+    
     let price = eleKm * 0.21;
 
     if (eleAge === 'minorenne') {
