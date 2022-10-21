@@ -23,6 +23,8 @@ eleInvia.addEventListener('click' , function(){
     const eleAge = document.querySelector('#age').value;
     const eleKm = document.querySelector('#km').value;
     const name = document.querySelector('#name').value;
+    const randomInteger = Math.floor((Math.random() * 20) +1 )
+    const randomInteger2 = Math.floor(Math.random() * 99999 )
     let price = eleKm * 0.21;
 
     if (eleAge === 'minorenne') {
@@ -33,8 +35,9 @@ eleInvia.addEventListener('click' , function(){
 } 
 
     document.getElementById('price').innerHTML = price.toFixed(2) + '€';
-
     document.getElementById('passeggero').innerHTML = name;
+    document.getElementById('carrozza').innerHTML = randomInteger;
+    document.getElementById('cpcode').innerHTML = randomInteger2;
 }
 )
 
