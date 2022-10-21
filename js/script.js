@@ -17,8 +17,8 @@ const button = document.querySelector('button');
 button.addEventListener('click' , function(){
 
     const eleAge = document.querySelector('#age').value;
-    const eleKm = document.getElementById('km').value;
-    
+    const eleKm = document.querySelector('#km').value;
+    const name = document.querySelector('#name').value;
     let price = eleKm * 0.21;
 
     if (eleAge === 'minorenne') {
@@ -29,5 +29,7 @@ button.addEventListener('click' , function(){
 } 
 
     document.getElementById('price').innerHTML = price.toFixed(2) + '€';
+
+    document.getElementById('passeggero').innerHTML = name;
 }
 )
