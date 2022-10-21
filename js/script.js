@@ -12,9 +12,13 @@ END IF
 */
 
 
-const button = document.querySelector('button');
+const eleInvia = document.querySelector('.invia');
+const eleCancella = document.querySelector('.cancella');
+const eleTicket = document.querySelector('.ticket');
 
-button.addEventListener('click' , function(){
+eleInvia.addEventListener('click' , function(){
+
+    eleTicket.classList.add('show');
 
     const eleAge = document.querySelector('#age').value;
     const eleKm = document.querySelector('#km').value;
@@ -31,5 +35,10 @@ button.addEventListener('click' , function(){
     document.getElementById('price').innerHTML = price.toFixed(2) + '€';
 
     document.getElementById('passeggero').innerHTML = name;
+}
+)
+
+eleCancella.addEventListener('click' , function(){
+    document.location.reload();
 }
 )

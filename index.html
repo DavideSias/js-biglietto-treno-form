@@ -6,25 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form biglietto</title>
 
-    <!-- style -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+     <!-- style -->
+     <link rel="stylesheet" href="css/style.css">
 
     <!-- script -->
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <input type="text" id="name">
-    <input type="number" id="km">
+    <div class="bg_color">
+        <div class="container p-5">
+            <div class="row text-center gy-3 mb-5 pb-3 bg-white rounded">
+                <h1 class="text-uppercase">Calcola il prezzo del tuo biglietto</h1>
+                <div>
+                    <input type="text" id="name">
+                    <input type="number" id="km">
+                    
+                    <label for="age">Fascia d'età:
+                        <select name="age" id="age">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <div>
+                    <button class="btn btn-primary invia">Bottone</button>
+                    <button class="btn btn-primary cancella">Annulla</button>
+                </div>
+            
+            </div>
+    
+            <div class="row text-center bg-white rounded p-3 ticket">
+                <h2 class="text-uppercase">Il tuo biglietto</h2>
+                <div>Nome passeggero: <span id="passeggero"></span></div>
+                <div>Il costo è: <span id="price"></span></div>
+            </div>
+        </div>
+    </div>
 
-    <label for="age">Fascia d'età:</label>
-        <select name="age" id="age">
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="over65">Over 65</option>
-        </select>
-    <button>Bottone</button>
 
-    <div>Nome passeggero: <span id="passeggero"></span></div>
-    <div>Il costo è: <span id="price"></span></div>
+
 </body>
 </html>
