@@ -29,7 +29,7 @@ eleInvia.addEventListener('click' , function(){
 
     if ((name == '') || (eleKm == 0)){
         alert('Per favore inserire nome o km da percorrere');
-        window.location.reload();
+        document.location.reload();
 
     }    if (eleAge === 'minorenne') {
         price = price - (price * 0.2);
