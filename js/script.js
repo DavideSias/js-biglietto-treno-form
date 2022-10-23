@@ -27,13 +27,17 @@ eleInvia.addEventListener('click' , function(){
     const randomInteger2 = Math.floor(Math.random() * 99999 )
     let price = eleKm * 0.21;
 
-    if (eleAge === 'minorenne') {
-    price = price - (price * 0.2);
-    
-}   else if(eleAge === 'over65'){
-    price = price - (price * 0.4);     
-} 
+    if ((name == '') || (eleKm == 0)){
+        alert('Per favore inserire nome o km da percorrere');
+        window.location.reload();
 
+    }    if (eleAge === 'minorenne') {
+        price = price - (price * 0.2);
+        
+    }   else if(eleAge === 'over65'){
+        price = price - (price * 0.4);     
+    } 
+    
     document.getElementById('price').innerHTML = price.toFixed(2) + '€';
     document.getElementById('passeggero').innerHTML = name;
     document.getElementById('carrozza').innerHTML = randomInteger;
